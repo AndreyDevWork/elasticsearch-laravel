@@ -1,0 +1,8 @@
+.DS_Store
+mysql
+postgresql
+node_modules
+/.idea
+/.vscode
+.env
+/elasticsearch
