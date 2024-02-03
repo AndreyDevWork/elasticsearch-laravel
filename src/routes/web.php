@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get("/", function () {
+    $article = new Article([
+        "title" => "Заголовок статьи",
+        "body" => "Текст статьи",
+    ]);
+
+    // Сохраняем статью в базе данных
+    $article->save();
+    return view("welcome");
 });
