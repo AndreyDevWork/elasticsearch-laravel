@@ -21,3 +21,6 @@ db-seed:
 
 passport-keys:
 	docker-compose exec app php artisan passport:client --password
+
+chmod:
+	sudo chmod 777 -R ./
