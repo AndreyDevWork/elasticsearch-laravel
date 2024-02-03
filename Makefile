@@ -24,3 +24,6 @@ passport-keys:
 
 chmod:
 	sudo chmod 777 -R ./
+
+elastic-c:
+	docker-compose exec app php artisan search:reindex
